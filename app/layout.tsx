@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Schibsted_Grotesk, Martian_Mono } from "next/font/google";
 import "./globals.css";
+import { PostHogProvider } from "@/provider/ph-provider";
 import LightRays from "@/components/LightRays";
 import Navbar from "@/components/Navbar";
 
@@ -45,7 +46,9 @@ export default function RootLayout({
           />
         </div>
 
-        <main className="relative z-2 min-h-screen">{children}</main>
+        <main className="relative z-2 min-h-screen">
+          <PostHogProvider>{children}</PostHogProvider>
+        </main>
       </body>
     </html>
   );
