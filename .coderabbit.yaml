@@ -8,28 +8,24 @@ reviews:
   # Enable auto-reviews on pull requests
   auto_review:
     enabled: true
-    
+
   # Review profile (can be: chill, assertive, or pythonic)
   profile: assertive
-  
+
   # Request changes on high severity issues
   request_changes_workflow: true
-  
+
   # High level summary
   high_level_summary: true
-  
+
   # Poem (fun summary in poem form)
   poem: true
-  
+
   # Review status comment
   review_status: true
-  
+
   # Collapse walkthrough details
   collapse_walkthrough: false
-  
-  # Auto-approve PRs that only have minor issues
-  auto_approve:
-    enabled: false
 
 # Chat settings
 chat:
@@ -43,27 +39,27 @@ path_instructions:
       - Ensure proper TypeScript types are used
       - Check for any usage
       - Verify return types are explicitly defined
-      
+
   - path: "**/*.tsx"
     instructions: |
       - Follow React best practices
       - Ensure components are properly typed
       - Check for accessibility issues
       - Verify proper use of hooks
-      
+
   - path: "app/**/*"
     instructions: |
       - Follow Next.js App Router conventions
       - Verify proper use of Server/Client Components
       - Check metadata exports
       - Ensure proper error handling
-      
+
   - path: "components/**/*"
     instructions: |
       - Ensure components are reusable
       - Check for prop validation
       - Verify proper component composition
-      
+
   - path: "**/*.test.{ts,tsx}"
     instructions: |
       - Verify test coverage
