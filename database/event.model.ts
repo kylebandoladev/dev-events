@@ -137,6 +137,7 @@ EventSchema.pre("save", function (next) {
       }
       this.date = parsedDate.toISOString().split("T")[0]; // Store as YYYY-MM-DD
     } catch (error) {
+      console.error("Date normalization error:", error);
       return next(new Error("Invalid date format"));
     }
   }
